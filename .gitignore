@@ -1,0 +1,12 @@
+# Local tooling, not part of the project
+.remember/
+.claude/
+
+# Build artifacts
+*.zip
+*.crx
+*.pem
+
+# OS clutter
+.DS_Store
+Thumbs.db

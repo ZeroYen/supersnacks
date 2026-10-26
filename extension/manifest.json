@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "SuperSnacks",
+  "version": "0.1.0",
+  "description": "Small, fast upgrades for the sites you use every day.",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://drive.google.com/*"],
+      "js": ["features/drive-audio/hook.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://drive.google.com/*"],
+      "js": ["features/drive-audio/player.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
